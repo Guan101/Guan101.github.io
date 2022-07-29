@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1、any类型 | 前端乐园</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script src="/js/base.js"></script>
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.af5ffae3.css" as="style"><link rel="preload" href="/assets/js/app.7ae32c9b.js" as="script"><link rel="preload" href="/assets/js/2.ccddca85.js" as="script"><link rel="preload" href="/assets/js/9.4b02c2a0.js" as="script"><link rel="prefetch" href="/assets/js/10.788ef7ad.js"><link rel="prefetch" href="/assets/js/11.95f870cc.js"><link rel="prefetch" href="/assets/js/12.efbc9f47.js"><link rel="prefetch" href="/assets/js/13.96133281.js"><link rel="prefetch" href="/assets/js/14.3e3dcaeb.js"><link rel="prefetch" href="/assets/js/3.681fcbbb.js"><link rel="prefetch" href="/assets/js/4.5f5da7b2.js"><link rel="prefetch" href="/assets/js/5.8435e3b0.js"><link rel="prefetch" href="/assets/js/6.d98a653f.js"><link rel="prefetch" href="/assets/js/7.b5d61da2.js"><link rel="prefetch" href="/assets/js/8.390a89ff.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.af5ffae3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端乐园</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  生活
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习" class="dropdown-title"><span class="title">学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习" class="mobile-dropdown-title"><span class="title">学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/math/math1.html" class="nav-link">
+  数学
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  生活
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习" class="dropdown-title"><span class="title">学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习" class="mobile-dropdown-title"><span class="title">学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/math/math1.html" class="nav-link">
+  数学
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>TS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/TS/基础类型.html" class="sidebar-link">基础类型</a></li><li><a href="/study/TS/任意类型.html" class="active sidebar-link">任意类型</a></li><li><a href="/study/TS/接口和对象类型.html" class="sidebar-link">接口和对象类型</a></li><li><a href="/study/TS/数组类型.html" class="sidebar-link">数组类型</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>红宝书</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="_1、any类型"><a href="#_1、any类型" class="header-anchor">#</a> 1、any类型</h3> <ul><li>any类型没有限定哪种类型，可以随便赋值切换类型，不需要检查类型，例如：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span>any <span class="token operator">=</span> <span class="token number">123</span>
+a <span class="token operator">=</span> <span class="token string">'123'</span>
+a <span class="token operator">=</span> <span class="token boolean">true</span>
+</code></pre></div><ul><li>声明变量的时候没有指定类型的话，则默认为any类型；</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> anys<span class="token punctuation">;</span>
+anys <span class="token operator">=</span> <span class="token string">'123'</span>
+anys <span class="token operator">=</span> <span class="token number">123</span>
+</code></pre></div><p><em><strong>但是使用any的话其实也就是失去了ts类型检查的作用</strong></em></p> <h3 id="_2、unknown-类型"><a href="#_2、unknown-类型" class="header-anchor">#</a> 2、unknown 类型</h3> <p>TypeScript 3.0中引入的 unknown 类型也被认为是 top type（顶级类型） ，但它更安全。与 any 一样，所有类型都可以分配给unknown。
+<br>
+unknow类型比any更加严格, 当你要使用any的时候可以尝试使用unknow</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//unknown 可以定义任何类型的值</span>
+<span class="token keyword">let</span> <span class="token literal-property property">value</span><span class="token operator">:</span> unknown<span class="token punctuation">;</span>
+ 
+value <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>             <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token number">42</span><span class="token punctuation">;</span>               <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token string">&quot;Hello World&quot;</span><span class="token punctuation">;</span>    <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>               <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>               <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>             <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token keyword">undefined</span><span class="token punctuation">;</span>        <span class="token comment">// √</span>
+value <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// √</span>
+ 
+<span class="token comment">//以下这样写会报错，因为unknown类型不能作为子类型,只能作为父类型;而any可以作为父类型和子类型</span>
+<span class="token comment">//unknown类型不能赋值给其他类型</span>
+<span class="token keyword">let</span> <span class="token literal-property property">a</span><span class="token operator">:</span>unknown <span class="token operator">=</span> <span class="token string">'123'</span>
+<span class="token keyword">let</span> <span class="token literal-property property">b</span><span class="token operator">:</span>string <span class="token operator">=</span> a   <span class="token comment">// ×</span>
+ 
+<span class="token comment">//这样就没问题 any类型是可以的</span>
+<span class="token keyword">let</span> <span class="token literal-property property">q</span><span class="token operator">:</span>any <span class="token operator">=</span> <span class="token string">'123'</span>
+<span class="token keyword">let</span> <span class="token literal-property property">w</span><span class="token operator">:</span>string <span class="token operator">=</span> q   <span class="token comment">// √</span>
+ 
+<span class="token comment">//unknown可赋值对象只有unknown 和 any</span>
+<span class="token keyword">let</span> <span class="token literal-property property">e</span><span class="token operator">:</span>unknown <span class="token operator">=</span> <span class="token string">'123'</span>  
+<span class="token keyword">let</span> <span class="token literal-property property">r</span><span class="token operator">:</span>any<span class="token operator">=</span> <span class="token string">'456'</span>
+ 
+r <span class="token operator">=</span> e
+</code></pre></div><p><em><strong>另外unknown和any还有一个区别</strong></em></p> <blockquote><p><strong>如果是unknow类型的话，我们是不能调用其属性和函数方法的；any类型的话是可以的</strong></p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 如果我们获取any类型的对象不存在的属性的时候，是不会报错的</span>
+<span class="token keyword">let</span> <span class="token literal-property property">obj</span><span class="token operator">:</span>any <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">b</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span>a    <span class="token comment">// √</span>
+ 
+ 
+<span class="token comment">// 如果是unknow类型的话，我们是不能调用其属性和函数方法的；any类型的话是可以的。</span>
+<span class="token keyword">let</span> <span class="token literal-property property">obj</span><span class="token operator">:</span>unknown <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">b</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token literal-property property">ccc</span><span class="token operator">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span><span class="token parameter">number</span><span class="token operator">=&gt;</span><span class="token number">213</span><span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span>b    <span class="token comment">// × </span>
+obj<span class="token punctuation">.</span><span class="token function">ccc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment">// × </span>
+</code></pre></div><blockquote><p><em><strong>总结：</strong></em></p></blockquote> <blockquote><blockquote><p>1、any类型可以视作我们在写js，条件宽松，可以任意赋值给其他类型或被赋值,以及像对待js对象那样去调用。</p></blockquote></blockquote> <blockquote><blockquote><p>2、当我们不确定类型时，使用unknown类型会会更严格、更安全。它是top type,这也意味着它不能作为子类型去给其他类型赋值（除了unknown和any类型），只能作为父类型被赋值。</p></blockquote></blockquote> <blockquote><blockquote><p>3、我们不能调用unknown类型的属性和函数方法</p></blockquote></blockquote></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/27/2022, 3:45:46 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/study/TS/基础类型.html" class="prev">
+        基础类型
+      </a></span> <span class="next"><a href="/study/TS/接口和对象类型.html">
+        接口和对象类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7ae32c9b.js" defer></script><script src="/assets/js/2.ccddca85.js" defer></script><script src="/assets/js/9.4b02c2a0.js" defer></script>
+  </body>
+</html>
